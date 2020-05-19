@@ -1,18 +1,11 @@
 <?php
 
-function getStats(...$numbers)
-{
-  $total = 0;
-  foreach ($numbers as $number) {
-    $total += $number;
-  }
-  return [$total, $total / count($numbers)];
-}
+$input = ' dot_taguchi  ';
+$input = trim($input);
 
-// print_r(getStats(1, 3, 5));
+// echo strlen($input) . PHP_EOL;
+// echo strpos($input, '_') . PHP_EOL;
 
-// list($sum, $average) = getStats(1, 3, 5);
-[$sum, $average] = getStats(1, 3, 5);
-
-echo $sum . PHP_EOL;
-echo $average . PHP_EOL;
+$input = str_replace('_', '-', $input);
+echo $input . PHP_EOL;
+?>
