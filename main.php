@@ -1,10 +1,14 @@
 <?php
 
-$scores = [30, 40, 50, 60, 70, 80];
+$scores = [40, 50, 20, 30];
 
-// array_splice($scores, 2, 3);
-// array_splice($scores, 2, 3, 100);
-array_splice($scores, 2, 0, [100, 101]);
+// sort($scores);
+// print_r($scores);
 
-print_r($scores);
+// shuffle($scores);
+// print_r($scores);
+
+$picked = array_rand($scores, 2);
+echo $scores[$picked[0]] . PHP_EOL;
+echo $scores[$picked[1]] . PHP_EOL;
 ?>
