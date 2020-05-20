@@ -1,9 +1,17 @@
 <?php
 
-//$d = [2020, 11, 15];
-//echo "$d[0]-$d[1]-$d[2]" . PHP_EOL;
-//echo implode('-', $d) . PHP_EOL;
+$n = 5.6283;
 
-$t = '17:32:45';
-print_r(explode(':', $t));
+// echo ceil($n) . PHP_EOL; // 6
+// echo floor($n) . PHP_EOL; // 5
+// echo round($n) . PHP_EOL; // 6
+// echo round($n, 2) . PHP_EOL; // 5.63
+
+// echo mt_rand(1, 6) . PHP_EOL;
+
+// echo max(3, 9, 4) .PHP_EOL;
+// echo min(3, 9, 4) .PHP_EOL;
+
+echo M_PI . PHP_EOL;
+echo M_SQRT2 . PHP_EOL;
 ?>
