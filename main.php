@@ -1,13 +1,21 @@
 <?php
 
-// $scores = array_fill(0, 5, 10);
-// $scores = range(1, 10);
-$scores = range(1, 10, 2);
+$a = [3, 4, 8];
+$b = [4, 8, 12];
 
-print_r($scores);
+// $merged = array_merge($a, $b);
+// $merged = [...$a, ...$b];
+// print_r($merged);
 
-echo array_sum($scores) . PHP_EOL;
-echo max($scores) . PHP_EOL;
-echo min($scores) . PHP_EOL;
-echo array_sum($scores) / count($scores) . PHP_EOL;
+// $uniques = array_unique($merged);
+// print_r($uniques);
+
+$diff1 = array_diff($a, $b);
+print_r($diff1); // [3]
+
+$diff2 = array_diff($b, $a);
+print_r($diff2); // [12]
+
+$common = array_intersect($a, $b);
+print_r($common); // [4, 8]
 ?>
