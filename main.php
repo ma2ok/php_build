@@ -1,18 +1,23 @@
 <?php
 
-$numbers = range(1, 10);
+$scores = [
+  'taguchi' => 80,
+  'hayashi' => 70,
+  'kikuchi' => 60,
+];
 
-$evenNumbers = array_filter(
-  $numbers,
- function ($n) {
-   if ($n % 2 === 0) {
-     return true;
-   } else {
-     return false;
-   }
-   return $n % 2 === 0;
- }
-);
+// sort($scores);
+// print_r($scores);
+// rsort($scores);
+// print_r($scores);
 
-print_r($evenNumbers);
+asort($scores);
+print_r($scores);
+arsort($scores);
+print_r($scores);
+
+ksort($scores);
+print_r($scores);
+krsort($scores);
+print_r($scores);
 ?>
