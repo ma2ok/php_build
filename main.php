@@ -1,11 +1,5 @@
 <?php
 
-// $scores = [
-//   'taguchi' => 80,
-//   'hayashi' => 70,
-//   'kikuchi' => 60,
-// ];
-
 $data = [
   ['name' => 'taguchi', 'score' => 80],
   ['name' => 'kikuchi', 'score' => 60],
@@ -13,14 +7,22 @@ $data = [
   ['name' => 'tamachi', 'score' => 60],
 ];
 
-usort(
-  $data,
-  function ($a, $b) {
-    if ($a['score'] === $b['score']) {
-      return 0;
-    }
-    return $a['score'] > $b['score'] ? 1 : -1;
-  }
+$scores = array_column($data, 'score');
+$names = array_column($data, 'name');
+
+// print_r($scores);
+// print_r($names);
+
+// array_multisort(
+//   $scores,
+//   $names,
+//   $data
+// );
+
+array_multisort(
+  $scores, SORT_DESC, SORT_NUMERIC,
+  $names, SORT_DESC, SORT_STRING,
+  $data
 );
 
 print_r($data);
