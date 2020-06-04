@@ -1,12 +1,13 @@
 <?php
 
-// $contents = "taro\njiro\nsaburo\n";
-// file_put_contents('names.txt', $contents);
+// file_put_contents('data/taro.txt', "taro\n");
+// file_put_contents('data/jiro.txt', "jiro\n");
 
-// $contents = file_get_contents('names.txt');
-// echo $contents;
-
-// $lines = file('names.txt');
-$lines = file('names.txt', FILE_IGNORE_NEW_LINES);
-var_dump($lines);
+$dp = opendir('data');
+while (($item = readdir($dp)) !== false) {
+  if ($item === '.' || $item === '..') {
+    continue;
+  }
+  echo $item . PHP_EOL;
+}
 ?>
