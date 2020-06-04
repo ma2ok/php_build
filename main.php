@@ -10,4 +10,5 @@ while (($item = readdir($dp)) !== false) {
   }
   echo $item . PHP_EOL;
 }
+
 ?>
