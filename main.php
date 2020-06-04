@@ -1,8 +1,9 @@
 <?php
 
-$fp = fopen('names.txt', 'w');
+$fp = fopen('names.txt', 'a');
 
-fwrite($fp, "taro\n");
+fwrite($fp, "jiro\n");
+fwrite($fp, "saburo\n");
 
 fclose($fp);
 ?>
