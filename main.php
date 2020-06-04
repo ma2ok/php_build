@@ -1,21 +1,15 @@
 <?php
 
-// if (file_exists('data/saburo.txt') === false) {
-if (!file_exists('data/saburo.txt')) {
-  echo 'Saburo not here!' . PHP_EOL;
-  exit;
-}
+// echo time() . PHP_EOL;
 
-if (file_exists('data') === true) {
-  echo 'data exists!' . PHP_EOL;
-}
+// echo date('Y-m-d l', time()) . PHP_EOL;
+// echo date('Y-m-d l') . PHP_EOL;
 
-if (is_writeable('data/taro.txt') === true) {
-  echo 'taro is writable!' . PHP_EOL;
-}
+// echo date('Y-m-d l', mktime(0, 0, 0, 5, 1, 2020)) . PHP_EOL;
 
-if (is_readable('data/taro.txt') === true) {
-  echo 'taro is readable!' . PHP_EOL;
-}
+echo date('Y-m-d l', strtotime('2020-05-07')) . PHP_EOL;
+echo date('Y-m-d l', strtotime('2020-05-07 +1 day')) . PHP_EOL;
+
+// DateTime
 
 ?>
