@@ -1,29 +1,8 @@
 <?php
 
-$data = [
-  ['name' => 'taguchi', 'score' => 80],
-  ['name' => 'kikuchi', 'score' => 60],
-  ['name' => 'hayashi', 'score' => 70],
-  ['name' => 'tamachi', 'score' => 60],
-];
+$fp = fopen('names.txt', 'w');
 
-$scores = array_column($data, 'score');
-$names = array_column($data, 'name');
+fwrite($fp, "taro\n");
 
-// print_r($scores);
-// print_r($names);
-
-// array_multisort(
-//   $scores,
-//   $names,
-//   $data
-// );
-
-array_multisort(
-  $scores, SORT_DESC, SORT_NUMERIC,
-  $names, SORT_DESC, SORT_STRING,
-  $data
-);
-
-print_r($data);
+fclose($fp);
 ?>
