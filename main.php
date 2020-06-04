@@ -1,12 +1,12 @@
 <?php
-// $fp = fopen('names.txt', 'r');
-// $contents = fread($fp, filesize('names.txt'));
-// fclose($fp);
+
+// $contents = "taro\njiro\nsaburo\n";
+// file_put_contents('names.txt', $contents);
+
+// $contents = file_get_contents('names.txt');
 // echo $contents;
 
-$fp = fopen('names.txt', 'r');
-while (($line = fgets($fp)) !== false) {
-  echo $line;
-}
-fclose($fp);
+// $lines = file('names.txt');
+$lines = file('names.txt', FILE_IGNORE_NEW_LINES);
+var_dump($lines);
 ?>
