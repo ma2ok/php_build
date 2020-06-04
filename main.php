@@ -1,14 +1,21 @@
 <?php
 
-// file_put_contents('data/taro.txt', "taro\n");
-// file_put_contents('data/jiro.txt', "jiro\n");
+// if (file_exists('data/saburo.txt') === false) {
+if (!file_exists('data/saburo.txt')) {
+  echo 'Saburo not here!' . PHP_EOL;
+  exit;
+}
 
-$dp = opendir('data');
-while (($item = readdir($dp)) !== false) {
-  if ($item === '.' || $item === '..') {
-    continue;
-  }
-  echo $item . PHP_EOL;
+if (file_exists('data') === true) {
+  echo 'data exists!' . PHP_EOL;
+}
+
+if (is_writeable('data/taro.txt') === true) {
+  echo 'taro is writable!' . PHP_EOL;
+}
+
+if (is_readable('data/taro.txt') === true) {
+  echo 'taro is readable!' . PHP_EOL;
 }
 
 ?>
